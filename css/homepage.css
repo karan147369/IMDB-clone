@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+#logo>img {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 70px;
+    height: 30px;
+
+
+}
+
+#searchbar input {
+    height: 30px;
+    width: 80%;
+    border-radius: 3px;
+    border: none;
+    box-shadow: none;
+    margin-top: 10px;
+    transition: border 0.2s ease-out;
+}
+
+#searchbar input:focus {
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
+    box-shadow: none;
+    border: 2px solid #f5c518;
+
+}
+
+#navbar {
+    position: relative;
+    height: 10vh;
+    /* border: 1px solid white; */
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+#logo {
+    flex-grow: 0;
+}
+
+#menu {
+    /* margin-left: 10px; */
+    text-align: center;
+    margin-top: 5px;
+    flex-grow: 0.5;
+}
+
+#menu span {
+    position: relative;
+    top: -30%;
+    font-weight: bolder;
+}
+
+#searchbar {
+    flex-grow: 3;
+}
+
+#watchlist {
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+#watchlist span {
+    position: relative;
+    top: -20%;
+    font-weight: bolder;
+}
+
+#searchLogo {
+    height: 15px;
+    position: absolute;
+    left: 64%;
+    margin-top: 16px;
+
+
+}
+
+#container {
+    margin: auto;
+    position: relative;
+    border: 1px solid white;
+    width: 90%;
+    height: 85vh
+}
