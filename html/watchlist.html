@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/watchlist.css">
 </head>
 
 <body>
@@ -16,19 +16,26 @@
                         alt="" />
                 </a>
             </div>
-            <div id="menu"><img src="../assets/lines.png" alt="" height="40px"><span>Menu</span> </div>
+            <!-- <div id="menu"><img src="../assets/lines.png" alt="" height="40px"><span>Menu</span> </div>
             <div id="searchbar"><input type="search" placeholder="Search IMDb"><img id="searchLogo"
                     src="../assets/loupe (1).png" alt=""></div>
             <div id="watchlist"><a href="../html/watchlist.html"><img src="../assets/bookmark.png" alt=""
                         height="30px"></a><span>Watchlist</span>
-            </div>
+            </div> -->
         </div>
     </header>
-    <div id="container">
+    <div id="List">
+        <table style="border: 1px solid white; width: 80%; margin: auto; color: white;">
+            <td style="font-weight: bolder; font-size: 1.5rem;">Movie Name</td>
+            <td style="font-weight: bolder; font-size: 1.5rem;">Director</td>
+            <td style="font-weight: bolder; font-size: 1.5rem;">Remove</td>
+            <tbody id="tbody">
 
+            </tbody>
+        </table>
     </div>
-    <script src="../js/index.js">
-    </script>
+    <script src="../js/watchlist.js"></script>
+
 </body>
 
 </html>

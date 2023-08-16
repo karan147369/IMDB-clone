@@ -2,9 +2,10 @@ body {
     margin: 0;
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
 
-#logo>img {
+#logo>a img {
     margin-top: 10px;
     margin-left: 10px;
     width: 70px;
@@ -80,14 +81,49 @@ body {
     position: absolute;
     left: 64%;
     margin-top: 16px;
-
-
 }
 
 #container {
     margin: auto;
+
     position: relative;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 90%;
-    height: 85vh
+    max-width: 1200px;
+    /* height: 85vh; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#container a {
+    text-decoration: none;
+}
+
+.child {
+    width: 20vw;
+    /* ; */
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.child img {
+    position: relative;
+    left: 10%;
+}
+
+.child div {
+    text-align: center;
+}
+
+.child:hover {
+    text-decoration: underline;
+    /* border: 1px dotted yellow */
+}
+
+#message {
+    margin: auto;
 }
