@@ -81,3 +81,7 @@ body {
     left: 64%;
     margin-top: 16px;
 }
+
+.remove:hover {
+    background-color: #f5c518;
+}

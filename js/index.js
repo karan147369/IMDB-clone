@@ -21,19 +21,40 @@ const addToWatchlist = () => { }
     const array = document.getElementsByClassName('child');
     Array.from(array).forEach((i) => {
         i.addEventListener('click', async () => {
+            const watchlist = JSON.parse(localStorage.getItem('list'))
+            let alreadyAddedToWatchlist = false;
+            for (let j of watchlist.list) {
+                console.log(j + " " + i.id)
+                if (i.id == j) alreadyAddedToWatchlist = true;
+            }
             const data = await fetch(`https://omdbapi.com/?apikey=2f2e0ecc&i=${i.id}`);
             const movieDetail = await data.json();
-            console.log(movieDetail)
-            element.innerHTML = `<div class='moveDetails'>
-            <div id=''poster><img src=${movieDetail.Poster} alt='Poster Not Available'></img><div>
-            <div id='movieDescription>
+            // console.log(movieDetail)
+            if (!alreadyAddedToWatchlist) {
+                element.innerHTML = `
+            <div id='poster'><img src=${movieDetail.Poster} alt='Poster Not Available'></img></div>
+            <div id='movieDescription'>
             <p>${movieDetail.Title}</p>
             <p>${movieDetail.Year}</p>
             <p>${movieDetail.Release}</p>
             <p>${movieDetail.Genre}</p>
-            <button id='addtowatchlist'>Add</button>
+            <button id='addtowatchlist'>Add to watchlist</button>
             </div >
-            </div > `
+             `
+            }
+            else {
+                element.innerHTML = `
+            <div id='poster'><img src=${movieDetail.Poster} alt='Poster Not Available'></img></div>
+            <div id='movieDescription'>
+            <p>${movieDetail.Title}</p>
+            <p>${movieDetail.Year}</p>
+            <p>${movieDetail.Release}</p>
+            <p>${movieDetail.Genre}</p>
+            <button id='' disabled='true'>Already added to watchlist</button>
+            </div >
+             `
+            }
+
             document.getElementById('addtowatchlist').addEventListener('click', () => {
 
                 let obj = JSON.parse(localStorage.getItem('list'));
